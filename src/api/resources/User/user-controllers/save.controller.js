@@ -64,14 +64,13 @@ exports.save = async(req, res) => {
                 const user = await User.create(req.body);
                 if (user) {
                     const val = func.sendEmail(req.body.email);
-                    var token = auth.getToken({ _id: user._id });
+                    var token = auth.getToken({ _id: user._id, name: user.username, email: user.email });
                     console.log("Token: ", token);
                     // console.log(val);
 
                     res.status(statusCode.ACCEPTED).json({
                         success: true,
-                        token: token,
-                        status: "Please check your email to enter 6 digit code!",
+                        token: token
                     });
                 } else {
                     console.log("Email exist in database:", findUser);
