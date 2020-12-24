@@ -48,9 +48,9 @@ exports.authenticate = async(req, res) => {
                     req.body.password,
                     findUser.password
                 );
-                console.log(req.body.password, findUser.password);
                 if (verifypassword) {
-                    const token = auth.getToken({ _id: user._id, name: user.username, email: user.email });
+                    console.log(verifypassword);
+                    const token = auth.getToken({ _id: findUser._id, name: findUser.username, email: findUser.email });
                     return res.status(httpstatus.ACCEPTED).json({
                         success: true,
                         token: token,

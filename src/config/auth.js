@@ -6,7 +6,7 @@ var User = require('../api/resources/User/user-models/user.model');
 var devconfig = require('./process');
 
 exports.getToken = function(user) {
-    return jwtToken.sign(user, devconfig.secretKey, {expiresIn: '1d'});
+    return jwtToken.sign(user, devconfig.secretKey, { expiresIn: '1d' });
 }
 
 
@@ -14,12 +14,12 @@ var opts = {};
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = devconfig.secretKey;
 
-exports.jwtPassport = passport.use(new JwtStrategy(opts,(jwt_payload, done) => {
-    console.log('jwt_payload: ',jwt_payload);
-    User.findOne({_id: jwt_payload._id}, (err, user) => {
-        if(err) {
+exports.jwtPassport = passport.use(new JwtStrategy(opts, (jwt_payload, done) => {
+    console.log('jwt_payload: ', jwt_payload);
+    User.findOne({ _id: jwt_payload._id }, (err, user) => {
+        if (err) {
             return done(err, false);
-        } else if(user) {
+        } else if (user) {
             return done(null, user);
         } else {
             return done(null, false);
@@ -28,4 +28,4 @@ exports.jwtPassport = passport.use(new JwtStrategy(opts,(jwt_payload, done) => {
 
 }));
 
-exports.verifyuser = passport.authenticate('jwt', {session:false});
+exports.verifyuser = passport.authenticate('jwt', { session: false });

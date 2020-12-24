@@ -52,9 +52,9 @@ exports.save = async(req, res) => {
             console.log("Email exist in database:", findUser);
             if (findUser) {
                 console.log("Email exist in database:", findUser);
-                res.status(statusCode.BAD_REQUEST).json({
+                res.status(404).json({
                     success: false,
-                    status: "Email already in use, try wiht another email!",
+                    status: "Email already in use, try with another email!",
                 });
             } else {
                 /* converting a password to hash-password */
