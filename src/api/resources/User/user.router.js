@@ -45,8 +45,13 @@ userRouter.post('/verifyadmin/:admin', updateController.verifyAdminDetails);
 // http://localhost:4000/api/users/updateadmin/:admin
 userRouter.post('/updateadmin/:admin', updateController.setNewPasswordForAdmin);
 
+// http://localhost:4000/api/users/:id/createFileUrl
 userRouter.post('/:id/createFileUrl', fileController.createFile);
+
+// http://localhost:4000/api/users/:id/getFilesUrl
 userRouter.get('/:id/getFilesUrl', fileController.getFiles);
+
+// http://localhost:4000/api/users/:id/deleteFileUrl/:fileId
 userRouter.delete('/:id/deleteFileUrl/:fileId', fileController.deleteFile);
 
 /*  */
