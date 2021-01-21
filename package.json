@@ -1,29 +1,29 @@
 {
-  "name": "user-auth",
-  "version": "1.0.0",
-  "description": "In this app, I will complete all the scenario of user authentication. (SignUp, Login, Forget Password)",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon app",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Nabeel Saleem",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "express-form-data": "^2.0.14",
-    "http-status-codes": "^1.4.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.0",
-    "morgan": "^1.10.0",
-    "nodemailer": "^6.4.11",
-    "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0",
-    "password-hash": "^1.2.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.6"
-  }
+    "name": "user-auth",
+    "version": "1.0.0",
+    "description": "In this app, I will complete all the scenario of user authentication. (SignUp, Login, Forget Password)",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon app",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "EasyToPredict",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "express-form-data": "^2.0.14",
+        "http-status-codes": "^1.4.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.10.0",
+        "morgan": "^1.10.0",
+        "nodemailer": "^6.4.11",
+        "passport": "^0.4.1",
+        "passport-jwt": "^4.0.0",
+        "password-hash": "^1.2.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    }
 }
