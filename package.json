@@ -4,7 +4,7 @@
     "description": "In this app, I will complete all the scenario of user authentication. (SignUp, Login, Forget Password)",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon app",
+        "start": "node app",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "EasyToPredict",
